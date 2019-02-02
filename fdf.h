@@ -31,8 +31,9 @@ typedef struct		s_delta
 void	plotLine(t_line *line, t_libx *mlx);
 void	plotLineLow(t_line	*line, t_libx *mlx);
 void plotLineHigh(t_line *line, t_libx *mlx);
-void	*draw_line(t_libx *mlx);
+void *draw_line(t_libx *mlx, int x0,int y0,int x1,int y1);
 void	*window();
 int		abs(int a);
+int		matrix(t_libx *mlx);
 
 #endif

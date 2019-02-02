@@ -9,25 +9,18 @@ void *window()
 	mlx = (t_libx *)malloc(sizeof(t_libx));
 	mlx->mlx_ptr = mlx_init();
 	mlx->win_ptr = mlx_new_window(mlx->mlx_ptr, 500, 500, "mlx 42");
-	draw_line(mlx);
+	matrix(mlx);
 	mlx_loop(mlx->mlx_ptr);
 }
 
-void *draw_line(t_libx *mlx)
+void *draw_line(t_libx *mlx, int x0,int y0,int x1,int y1)
 {
-
 	t_line *line;
 	line = (t_line *)malloc(sizeof(t_line));
-	line->x0 = 0;
-	line->x1 = 450;
-	line->y0 = 0;
-	line->y1 = 450;
-
-	plotLine(line, mlx);
-	line->x0 = 450;
-	line->x1 = 0;
-	line->y0 = 0;
-	line->y1 = 450;
+	line->x0 = x0;
+	line->x1 = x1;
+	line->y0 = y0;
+	line->y1 = y1;
 	plotLine(line, mlx);
 }
 
