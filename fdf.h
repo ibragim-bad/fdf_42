@@ -1,6 +1,16 @@
 #ifndef FDF_H
 # define FDF_H
 
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include "./minilibx/mlx.h"
+#include <stdlib.h>
+#include "./libft/libft.h"
+#include "./libft/get_next_line.h"
+
 typedef struct		s_libx
 {
 	void *mlx_ptr;
@@ -11,6 +21,8 @@ typedef struct		s_pix
 {
 	int	x;
 	int	y;
+	int z;
+	void *next;
 }					t_pix;
 
 typedef struct		s_line
